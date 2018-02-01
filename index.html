@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <title>Burlesco - Leia notícias sem ser assinante</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:dnt" content="on">
     <link href="build/bulma.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="build/bulma-divider.min.css" rel="stylesheet">
+    <link href="stylesheets/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
   </head>
@@ -35,12 +36,12 @@
             </span>
             <span>Instalar</span>
           </a>
-          <a class="button is-large" href="#faq">
+          <a class="button is-large" href="#publicacoes">
             <span>Saiba mais</span>
           </a>
           <br>
           <br>
-          <a href="https://github.com/rodorgas/burlesco"><img src="https://img.shields.io/github/stars/rodorgas/burlesco.svg?style=social&label=Star&maxAge=2592000"></a>
+          <a href="https://github.com/rodorgas/burlesco"><img src="https://img.shields.io/github/stars/rodorgas/burlesco.svg?style=social"></a>
           <a href="https://twitter.com/BurlescoExt"><img src="https://img.shields.io/twitter/follow/BurlescoExt.svg?style=social"></a>
         </div>
       </div>
@@ -89,7 +90,7 @@
       </div>
     </section>
 
-    <section class="section narrow content">
+    <section class="section narrow content install-section">
       <div>
         <h2 class="title is-2 has-text-centered" id="instalacao">
           Instalação
@@ -97,49 +98,97 @@
         </h2>
 
         <h2 class="has-text-centered" style="text-decoration: underline">Desktop</h2>
-        <div class="columns">
+        <div class="columns install-desktop">
           <div class="column has-text-centered">
             <h3>Extensão</h3>
-            <p>Adicione a extensão ao seu navegador:</p>
-            <a class="button is-medium" href="https://addons.mozilla.org/pt-BR/firefox/addon/burlesco/">
-              <span class="icon">
-                <i class="fa fa-firefox"></i>
-              </span>
-              <span>Firefox</span>
-            </a>
-
-            <a class="button is-medium" href="https://addons.opera.com/pt-br/extensions/details/burlesco/">
-              <span class="icon">
-                <i class="fa fa-opera"></i>
-              </span>
-              <span>Opera</span>
-            </a>
+            <p class="action-text">Adicione a extensão</p>
+            <div class="dropdown has-text-centered">
+              <div class="dropdown-trigger">
+                <div class="button is-medium" aria-haspopup="true" aria-controls="dropdown-menu" id="install-button">
+                  <a href="https://addons.mozilla.org/pt-BR/firefox/addon/burlesco/" id="button-firefox">
+                    <span class="icon">
+                      <i class="fa fa-firefox"></i>
+                    </span>
+                    <span id="browser-text">Firefox</span>
+                  </a>
+                  <a href="https://addons.opera.com/pt-br/extensions/details/burlesco/" style="display: none" id="button-opera">
+                    <span class="icon">
+                      <i class="fa fa-opera"></i>
+                    </span>
+                    <span id="browser-text">Opera</span>
+                  </a>
+                  <a href="instrucoes-chrome.html" style="display: none" id="button-chrome">
+                    <span class="icon">
+                      <i class="fa fa-chrome"></i>
+                    </span>
+                    <span id="browser-text">Chrome</span>
+                  </a>
+                  <div class="icon is-small" id="browser-options">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <!--</a>-->
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content has-text-left">
+                  <a class="is-medium dropdown-item is-size-5" href="https://addons.mozilla.org/pt-BR/firefox/addon/burlesco/" id="menu-firefox">
+                    <span class="icon">
+                      <i class="fa fa-firefox"></i>
+                    </span>
+                    <span>Firefox</span>
+                  </a>
+                  <a class="is-medium dropdown-item is-size-5" href="https://addons.opera.com/pt-br/extensions/details/burlesco/" id="menu-opera">
+                    <span class="icon">
+                      <i class="fa fa-opera"></i>
+                    </span>
+                    <span>Opera</span>
+                  </a>
+                  <a href="instrucoes-chrome.html" class="dropdown-item is-size-5" id="menu-chrome">
+                    <span class="icon">
+                      <i class="fa fa-chrome"></i>
+                    </span>
+                    <span>Chrome</span>
+                  </a>
+                  <!--<a href="#" class="dropdown-item is-size-5">-->
+                  <!--<span class="icon">-->
+                  <!--<i class="fa fa-safari"></i>-->
+                  <!--</span>-->
+                  <!--<span>Safari</span>-->
+                  <!--</a>-->
+                </div>
+              </div>
+            </div>
           </div>
+
+          <div class="is-divider-vertical install-or" data-content="OU"></div>
           <div class="column has-text-centered">
-            <h3>Userscript*</h3>
+            <h3>Userscript</h3>
             <p>Adicione ao <a href="instrucoes-userscript.html">Tampermonkey</a>:</p>
-            <a class="button is-medium" href="/userscript/burlesco.user.js">
+            <a class="button is-medium" href="/userscript/burlesco.user.js" target="_blank">
               <span class="icon">
                 <img width="20" src="tampermonkey.png"></img>
               </span>
-              <span>Adicionar</span>
+              <span>burlesco.user.js</span>
             </a><br>
-            <span class="sub">*Compatível com Chrome, Edge, Opera e Firefox</span>
+            <span class="sub">Compatível com Chrome, Edge, Opera e Firefox</span>
           </div>
         </div>
 
         <h2 class="has-text-centered" style="text-decoration: underline">Celular e Tablet</h2>
-        <div class="columns">
+        <div class="columns has-text-centered">
           <div class="column content">
-            <h3 class="has-text-centered">Android</h3>
-            <ol class="has-text-centered" style="list-style-position: inside">
+            <h3>Android</h3>
+            <ol>
               <li>Instale o <a href="https://getfirefox.com">Mozilla Firefox</a></li>
               <li>Adicione a <a href="https://addons.mozilla.org/pt-BR/firefox/addon/burlesco/">extensão Burlesco</a></li>
             </ol>
           </div>
-          <div>
-            <h3 class="has-text-centered">iOS</h3>
-            <p class="has-text-centered">Para burlar alguns paywalls no iOS, <a href="ios.html">siga estas instruções</a></p>
+
+          <div class="is-divider-vertical install-or" data-content="OU" style="visibility: hidden"></div>
+
+          <div class="column">
+            <h3 class="">iOS</h3>
+            <p>Para o iPhone e iPad, <a href="ios.html">siga estas instruções</a></p>
           </div>
 
         </div>
@@ -267,12 +316,12 @@
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="http://wsj.com/">
             <em>The Wall Street Journal</em>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="https://www.washingtonpost.com/">
             <em>The Washington Post</em>
           </a>
         </li>
@@ -297,7 +346,7 @@
             <li><a href="#novo-site">Vocês podem adicionar um novo site?</a></li>
         </ul>
 
-        <h2><a id="o-que-é-paywall" class="anchor" href="#o-que-%C3%A9-paywall" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>O que é Paywall?</h2>
+        <h3><a id="o-que-é-paywall" class="anchor" href="#o-que-%C3%A9-paywall" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>O que é Paywall?</h3>
         <p>Paywall é um sistema de assinatura usado por jornais e outros veículos de comunicação digital que restringe o acesso aos não assinantes. É uma maneira desses veículos aumentarem suas receitas, seguindo uma tendência internacional que criou a medida depois da diminuição das tiragens impressas.</p>
 
         <p>Se o veículo deseja lucrar mais com a paywall existem alguns ônus, entre eles a perda de classificação no Google. Isso ocorre porque muitos textos deixam de ser indexados, já que requerem uma assinatura para serem lidos (e os robôs do Google não são assinantes).</p>
@@ -306,7 +355,7 @@
 
         <p>Jornais como O Popular usam um bloqueio mais simples e efetivo: notícias restritas a assinantes são, de fato, restritas a assinantes. Elas não são indexadas pelo Google; a notícia só é carregada se um usuário assinante estiver logado. Obviamente, essa extensão não funciona com esse tipo de bloqueio.</p>
 
-        <h2><a id="como-funciona" class="anchor" href="#como-funciona" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Como o Burlesco burla o paywall?</h2>
+        <h3><a id="como-funciona" class="anchor" href="#como-funciona" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Como o Burlesco burla o paywall?</h3>
 
         <p>Após servir a página com o conteúdo, os sites de notícia incluem um JavaScript responsável por ocultar o texto.</p>
         <p>O Burlesco instrui o navegador a ignorar esses scripts, enquanto todos os outros scripts que controlam menus, infográficos e comentários continuam funcionando perfeitamente.</p>
@@ -314,13 +363,13 @@
         <p>Trata-se apenas de apenas uma conveniência para que o usuário determinado a ler uma notícia bloqueada não tenha que ficar alterando as configurações do navegador, usando o modo de navegação anônima ou apps de leitura offline.</p>
 
 
-        <h2><a id="moral" class="anchor" href="#moral" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Burlar esse bloqueio não é ilegal ou imoral?</h2>
+        <h3><a id="moral" class="anchor" href="#moral" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Burlar esse bloqueio não é ilegal ou imoral?</h3>
 
         <p>São as próprias empresas que estão servindo os dados, e elas <a href="https://www.eff.org/deeplinks/2016/05/open-letter-members-w3c-advisory-committee">não podem ditar como os navegadores</a> devem apresentá-los. Escolher como um conteúdo deve ser apresentado em nossos computadores é uma garantia e uma premissa da web aberta. Se algum desses jornais estiver insatisfeito com a situação, eles são os únicos capazes de realizar o bloqueio efetivo. Talvez eles não o façam porque querem ter o benefício tanto de quem provê conteúdo pago (dinheiro das assinaturas) quanto de quem provê conteúdo gratuito (dinheiro dos anúncios e maior presença na internet).</p>
         <p>Como <a href="http://www1.folha.uol.com.br/fsp/ombudsman/50571-nos-nao-vamos-pagar-nada.shtml">disse a própria Ombudsman da Folha de S.Paulo</a> em 2012, quando o paywall foi implementado: <em>Não é difícil imaginar formas de burlar o “paywall”</em>. Mesmo sabendo que é facilmente burlável, a Folha continua usando tal mecanismo há cinco anos.</p>
         <p>A Folha e os outros jornais podem estar sendo bonzinhos ou também podem estar lucrando, pelo menos um pouco, com os não pagantes através dos anúncios (a menos que você também use um bloqueador de anúncios). Por isso, usar o Burlesco com adblockers é fortemente desencorajado. O financiamento dos jornais precisa vir de algum lugar.</p>
 
-        <h2><a id="novo-site" class="anchor" href="#novo-site" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vocês podem adicionar um novo site?</h2>
+        <h3><a id="novo-site" class="anchor" href="#novo-site" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vocês podem adicionar um novo site?</h3>
         <p>Deixe sua sugestão! O Burlesco só funciona com paywall poroso (aquele que libera uma quantidade de notícias por mês).</p>
         <p>Se você for desenvolvedor e quiser contribuir, pull requests são muito bem vindos. O Burlesco é open source e <a href="https://github.com/rodorgas/burlesco/graphs/contributors">agradece as contribuições</a>, então se você conseguir burlar algum site novo, pode ajudar a deixar a lista maior.</p>
       </div>
@@ -337,7 +386,7 @@
             <a class="bd-anchor-link" href="#atualizacoes">#</a>
           </h2>
           <p>O código-fonte pode ser usado para inspecionar o Burlesco e para fazer a instalação manual.</p>
-          <p>Veja as <a href="instrucoes-chrome.html">instruções para instalar manualmente no Chrome</a>.</p>
+          <p>Veja as <a href="instrucoes-chrome.html">instruções para instalar manualmente</a> a partir do código-fonte.</p>
           <div class="center" style="flex-direction: column">
             <p>
               <a class="button is-large" href="https://github.com/rodorgas/burlesco/releases">
@@ -388,5 +437,31 @@
       </script>
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </section>
+
+    <script src="build/bowser.min.js"></script>
+    <script>
+      var options = document.querySelector('#browser-options');
+      options.addEventListener('click', function() {
+        var button = document.querySelector('.install-desktop .dropdown');
+        button.classList.toggle('is-active');
+      });
+
+      function setBrowser(browser) {
+        if (browser != 'firefox') {
+          document.querySelector('#button-firefox').style.display = 'none';
+          document.querySelector('#button-' + browser).style.display = 'block';
+        }
+        document.querySelector('#menu-' + browser).style.display = 'none';
+      }
+
+      if (bowser.chrome || bowser.chromium || bowser.blink)
+        setBrowser('chrome');
+      else if (bowser.opera)
+        setBrowser('opera');
+      else if (bowser.firefox)
+        setBrowser('firefox');
+      else
+        setBrowser('firefox');
+    </script>
   </body>
 </html>

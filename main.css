@@ -41,6 +41,15 @@ body {
     list-style-position: inside;
 }
 
+.content ul.horizontal a {
+    color: unset;
+    text-decoration: unset;
+}
+
+.content ol {
+    list-style-position: inside;
+}
+
 .narrow {
     max-width: 912px;
     margin: 0 auto;
@@ -52,6 +61,42 @@ body {
 
 .sub {
     font-size: 0.8rem;
+}
+
+.button {
+    font-family: Raleway, BlinkMacSystemFont,-apple-system,"Ubuntu","Droid Sans","Helvetica Neue","Helvetica","Segoe UI","Arial",sans-serif;
+}
+
+#install-button {
+    padding: 0;
+}
+#install-button .icon:first-child {
+    margin-left: 5px;
+}
+#install-button .icon:last-child {
+    margin: 0;
+    height: 100%;
+}
+#install-button a {
+    color: unset;
+    height: 100%;
+    line-height: 2.2;
+    border-right: solid 1px #ddd;
+}
+
+#browser-text {
+    padding-right: 10px;
+}
+
+.install-desktop .action-text {
+    white-space: nowrap;
+}
+
+
+.install-section > div > .columns {
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 768px) {
@@ -67,5 +112,15 @@ body {
     }
     .content ul.horizontal {
         column-count: 1;
+    }
+
+    .install-or {
+        display: none;
+    }
+
+    .install-section > div > .columns {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
