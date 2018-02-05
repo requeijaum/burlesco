@@ -1,29 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en-us">
 
 <head>
   <meta charset="UTF-8">
-  <title>Instalação no Chrome | Burlesco - Leia notícias sem ser assinante</title>
+  <title>Instalação do Userscript | Burlesco - Leia notícias sem ser assinante</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css">
   <!--<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">-->
   <!--<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">-->
 
   <!--<link rel="stylesheet" href="node_modules/octicons/build/octicons.css">-->
+
   <link href="build/bulma.css" rel="stylesheet">
   <link href="main.css" rel="stylesheet">
-  <link rel="alternate" hreflang="en" href="https://burles.co/en/chrome-instructions.html" />
-  <style>
-  #paywall td:nth-child(1) {
-    white-space: nowrap;
-  }
-  #home-link:link    { color: white; }
-  #home-link:hover    { text-decoration: none; }
-  #home-link:visited { color: white; }
-  </style>
   <script>
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
@@ -67,33 +61,20 @@
 
   <article class="main section narrow content">
 
-    <h1>Instruções para usar o Burlesco no Chrome</h1>
+    <h1>Instruções para adicionar o userscript</h1>
 
-    <p>O Google <a href="https://twitter.com/rodorgas1/status/857598625806942208">removeu o Burlesco da Chrome Web Store</a> por considerá-lo uma violação das suas diretrizes. Há duas formas de contornar esse problema.</p>
+    <p>O userscript é a versão do Burlesco para ser usado com o TamperMonkey. Funciona no Chrome, Edge, Opera e Firefox. Todos os sites suportados pela extensão também funcionam com o userscript.</p>
 
-    <p>O método recomendado é a <a href="instrucoes-userscript.html">instalação do userscript para TamperMonkey</a>, que possui atualizações automáticas.</p>
-
-    <p>O segundo método é a instalação manual da extensão. O problema é que você reberá avisos pedindo para desativar o <em>Modo do desenvolvedor</em> sempre que iniciar o Chrome no Windows. Além disso, você não receberá atualizações automáticas.</p>
-
-    <p>Seguem as instruções para a instalação manual:</p>
+    <p>Seguem as instruções:</p>
 
     <ol>
-      <li><a href="https://github.com/rodorgas/burlesco/releases" target="_blank">Baixe o arquivo <code>burlesco-chrome.zip</code></a></li>
-      <li>Descompacte</li>
-      <li>Digite <code>chrome://extensions/</code> na barra de endereços do Chrome</li>
-      <li>Ative o <strong>Modo do desenvolvedor</strong> no canto superior direito</li>
-      <li>Clique em <strong>Carregar extensão expandida...</strong></li>
-      <li>Selecione a pasta onde o <code>burlesco-chrome</code> foi descompactado</li>
+      <li>Instale a extensão <a href="https://tampermonkey.net/" target="_blank">Tampermonkey</a></li>
+      <li>Adicione o <a href="/userscript/burlesco.user.js" target="_blank">burlesco.user.js</a></li>
+      <li>Limpe o cache do seu navegador (<a href="https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop">instruções</a>)</li>
       <li>Pronto! Agora é só aproveitar o Burlesco.</li>
     </ol>
 
-    <p>Se você usa navegadores baseados no Chromium, também pode instalar a extensão ao ir em <code>chrome://extensions</code> e arrastar o <a href="https://github.com/rodorgas/burlesco/releases">burlesco-chromium.crx</a> para dentro da página.</p>
-
-    <h2>Como remover o aviso no Windows?</h2>
-    <p>Há algumas alternativas para quem deseja utilizar o Burlesco no Chrome (Windows) sem os avisos pedindo para desativar o <em>Modo de desenvolvedor</em>.</p>
-    <p>Você pode instalar o <a href="https://www.google.com.br/chrome/browser/canary.html">Chrome Canary</a>, que é a versão experimental do Chrome. Trata-se de uma distribuição que não está totalmente pronta para produção e pode conter bugs, mas não exibe os avisos.</p>
-    <p>Se preferir usar a versão estável, é possível remover o aviso <a href="https://stackoverflow.com/questions/23055651/disable-developer-mode-extensions-pop-up-in-chrome">editando o Group Policy do Windows</a>, que é um processo um pouco trabalhoso, porém permanente.</p>
-    <p>Outra opção é utilizar o Chromium. Infelizmente, os executáveis para Windows não são distribuídos oficialmente pelos desenvolvedores do Chromium, mas há executáveis preparados por terceiros que podem ser encontrados facilmente.</p>
+    <p>Esse método é o preferido para uso no Chrome, já que a <a href="instrucoes-chrome.html">instalação manual da extensão</a> não possui atualizações automáticas.</p>
 
     <br>
     <p><a href="/">Voltar para página inicial</a></p>
@@ -109,8 +90,8 @@
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
     var disqus_config = function () {
-    this.page.url = 'https://burles.co/instrucoes-chrome.html';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 'ca781hd0a_instrucoes-chrome.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = 'https://burles.co/instrucoes-userscript.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'l8c2n0amw_instrucoes-userscript.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
@@ -126,9 +107,8 @@
 
       <br>
       <div id="share">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://burles.co" data-text="Leia notícias sem ser assinante, burle o paywall" data-via="rodorgas1" data-size="small">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://burles.co" data-text="Leia notícias sem ser assinante, burle o paywall" data-via="rodorgas1" data-size="small">Tweet</a>
 
-        <a href="https://github.com/Burlesco/chromium"><img src="https://img.shields.io/github/stars/burlesco/chromium.svg?style=social&label=Star&maxAge=2592000"></a>
       </div>
       <br>
 

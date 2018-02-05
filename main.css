@@ -54,9 +54,17 @@ body {
     max-width: 912px;
     margin: 0 auto;
 }
-.bd-anchor-link {
+
+.has-anchor-link {
+    position: relative;
+}
+.anchor-link {
     position: absolute;
-    right: calc(100% + 1rem);
+    font-size: 1.1rem;
+    top: 0.2rem;
+    left: -1rem;
+    color: #ccc;
+    line-height: 2.1em;
 }
 
 .sub {
@@ -99,11 +107,34 @@ body {
     margin-right: auto;
 }
 
+.language-selector {
+    position: absolute;
+    background-color: white;
+    font-size: .95em;
+    left: 65%;
+    padding: 5px 10px;
+    border-radius: 0 0 10px 10px;
+}
+.language-selector img {
+    height: 15px;
+    vertical-align: middle;
+}
+.language-selector a {
+    color: #4a4a4a;
+}
+
+.install-or.is-divider {
+    display: none;
+}
+.install-or.is-divider-vertical {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .main .logo {
         margin-right: 0;
     }
-    .intro .main {
+    .intro .main, .intro .main .center {
         flex-direction: column;
         text-align: center;
     }
@@ -114,7 +145,10 @@ body {
         column-count: 1;
     }
 
-    .install-or {
+    .install-or.is-divider {
+        display: block;
+    }
+    .install-or.is-divider-vertical {
         display: none;
     }
 

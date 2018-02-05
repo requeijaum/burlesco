@@ -10,8 +10,15 @@
     <link href="stylesheets/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="https://burles.co/en/" />
   </head>
   <body>
+    <div class="language-selector">
+      <a href="en/">
+        <img src="world.png"> English
+      </a>
+    </div>
+
     <section class="hero is-light is-medium intro">
       <div class="hero-body">
         <div class="container center main">
@@ -92,16 +99,16 @@
 
     <section class="section narrow content install-section">
       <div>
-        <h2 class="title is-2 has-text-centered" id="instalacao">
+        <h2 class="title is-2 has-text-centered has-anchor-link" id="instalacao">
+          <a class="anchor-link" href="#instalacao">#</a>
           Instalação
-          <a class="bd-anchor-link" href="#instalacao">#</a>
         </h2>
 
         <h2 class="has-text-centered" style="text-decoration: underline">Desktop</h2>
         <div class="columns install-desktop">
           <div class="column has-text-centered">
             <h3>Extensão</h3>
-            <p class="action-text">Adicione a extensão</p>
+            <p class="action-text">Adicione ao navegador:</p>
             <div class="dropdown has-text-centered">
               <div class="dropdown-trigger">
                 <div class="button is-medium" aria-haspopup="true" aria-controls="dropdown-menu" id="install-button">
@@ -160,7 +167,10 @@
             </div>
           </div>
 
+
+          <div class="is-divider install-or" data-content="OU"></div>
           <div class="is-divider-vertical install-or" data-content="OU"></div>
+
           <div class="column has-text-centered">
             <h3>Userscript</h3>
             <p>Adicione ao <a href="instrucoes-userscript.html">Tampermonkey</a>:</p>
@@ -174,7 +184,7 @@
           </div>
         </div>
 
-        <h2 class="has-text-centered" style="text-decoration: underline">Celular e Tablet</h2>
+        <h2 class="has-text-centered has-anchor-link" style="text-decoration: underline">Celular e Tablet</h2>
         <div class="columns has-text-centered">
           <div class="column content">
             <h3>Android</h3>
@@ -198,9 +208,9 @@
     <hr class="is-marginless">
 
     <section class="section narrow content">
-      <h2 class="title is-2" id="publicacoes">
+      <h2 class="title is-2 has-anchor-link" id="publicacoes">
+        <a class="anchor-link" href="#publicacoes">#</a>
         Publicações suportadas
-        <a class="bd-anchor-link" href="#publicacoes">#</a>
       </h2>
       <p>O Burlesco funciona com os seguintes sites de notícia:</p>
 
@@ -333,9 +343,9 @@
     <hr class="is-marginless">
 
     <section class="section narrow content">
-      <h2 class="title is-2" id="faq">
+      <h2 class="title is-2 has-anchor-link" id="faq">
+        <a class="anchor-link" href="#faq">#</a>
         Perguntas Frequentes
-        <a class="bd-anchor-link" href="#faq">#</a>
       </h2>
 
       <div class="content narrow">
@@ -381,12 +391,12 @@
     <section class="section narrow content">
       <div class="columns">
         <div class="column is-two-thirds">
-          <h2 class="title is-2">
+          <h2 class="title is-2 has-anchor-link">
             Código-fonte
-            <a class="bd-anchor-link" href="#atualizacoes">#</a>
+            <a class="anchor-link" href="#atualizacoes">#</a>
           </h2>
           <p>O código-fonte pode ser usado para inspecionar o Burlesco e para fazer a instalação manual.</p>
-          <p>Veja as <a href="instrucoes-chrome.html">instruções para instalar manualmente</a> a partir do código-fonte.</p>
+          <p>Para instalar a extensão manualmente a partir do código-fonte, <a href="instrucoes-chrome.html">siga estas instruções</a>.</p>
           <div class="center" style="flex-direction: column">
             <p>
               <a class="button is-large" href="https://github.com/rodorgas/burlesco/releases">
@@ -407,9 +417,9 @@
           </div>
         </div>
         <div class="column">
-          <h2 class="title is-2">
+          <h2 class="title is-2 has-anchor-link" id="atualizacoes">
             Atualizações
-            <a class="bd-anchor-link" href="#atualizacoes">#</a>
+            <a class="anchor-link" href="#atualizacoes">#</a>
           </h2>
           <a class="twitter-timeline" data-lang="pt" data-height="350" data-dnt="true" href="https://twitter.com/BurlescoExt?ref_src=twsrc%5Etfw">Tweets by BurlescoExt</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>

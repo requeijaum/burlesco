@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <title>Burlesco - Read news without subscribing</title>
@@ -13,6 +13,12 @@
     <link rel="alternate" hreflang="pt" href="https://burles.co/" />
   </head>
   <body>
+    <div class="language-selector">
+      <a href="/">
+        <img src="../world.png"> Português
+      </a>
+    </div>
+
     <section class="hero is-light is-medium intro">
       <div class="hero-body">
         <div class="container center main">
@@ -31,13 +37,13 @@
 
         <div class="hero-foot has-text-centered">
           <br><br>
-          <a class="button is-large is-primary" href="#instalacao">
+          <a class="button is-large is-primary" href="#install">
             <span class="icon">
               <i class="fa fa-download"></i>
             </span>
             <span>Install</span>
           </a>
-          <a class="button is-large" href="#publicacoes">
+          <a class="button is-large" href="#publications">
             <span>Read more</span>
           </a>
           <br>
@@ -59,7 +65,7 @@
       <div class="hero-body">
         <div class="container">
           <nav class="columns">
-            <a class="column has-text-centered" href="#instalacao">
+            <a class="column has-text-centered" href="#install">
               <span class="icon is-large" style="margin-right: 10px;">
                 <i class="fa fa-mobile"></i>
               </span>
@@ -72,7 +78,7 @@
               <p class="title is-4"><strong>Multiplataform</strong></p>
               <p class="subtitle">Get informed on <strong>anywhere</strong></p>
             </a>
-            <a class="column has-text-centered" href="#publicacoes">
+            <a class="column has-text-centered" href="#publications">
               <span class="icon is-large">
                 <i class="fa fa-newspaper-o"></i>
               </span>
@@ -93,8 +99,8 @@
 
     <section class="section narrow content install-section">
       <div>
-        <h2 class="title is-2 has-text-centered has-anchor-link" id="instalacao">
-          <a class="anchor-link" href="#instalacao">#</a>
+        <h2 class="title is-2 has-text-centered has-anchor-link" id="install">
+          <a class="anchor-link" href="#install">#</a>
           Installation
         </h2>
 
@@ -102,7 +108,7 @@
         <div class="columns install-desktop">
           <div class="column has-text-centered">
             <h3>Extension</h3>
-            <p class="action-text">Add the extension:</p>
+            <p class="action-text">Add to your browser:</p>
             <div class="dropdown has-text-centered">
               <div class="dropdown-trigger">
                 <div class="button is-medium" aria-haspopup="true" aria-controls="dropdown-menu" id="install-button">
@@ -118,7 +124,7 @@
                     </span>
                     <span id="browser-text">Opera</span>
                   </a>
-                  <a href="instrucoes-chrome.html" style="display: none" id="button-chrome">
+                  <a href="chrome-instructions.html" style="display: none" id="button-chrome">
                     <span class="icon">
                       <i class="fa fa-chrome"></i>
                     </span>
@@ -144,7 +150,7 @@
                     </span>
                     <span>Opera</span>
                   </a>
-                  <a href="instrucoes-chrome.html" class="dropdown-item is-size-5" id="menu-chrome">
+                  <a href="chrome-instructions.html" class="dropdown-item is-size-5" id="menu-chrome">
                     <span class="icon">
                       <i class="fa fa-chrome"></i>
                     </span>
@@ -161,13 +167,15 @@
             </div>
           </div>
 
-          <div class="is-divider-vertical install-or" data-content="OU"></div>
+          <div class="is-divider install-or" data-content="OR"></div>
+          <div class="is-divider-vertical install-or" data-content="OR"></div>
+
           <div class="column has-text-centered">
             <h3>Userscript</h3>
-            <p>Add to <a href="instrucoes-userscript.html">Tampermonkey</a>:</p>
+            <p>Add to <a href="userscript-instructions.html">Tampermonkey</a>:</p>
             <a class="button is-medium" href="/userscript/burlesco.user.js" target="_blank">
               <span class="icon">
-                <img width="20" src="tampermonkey.png"></img>
+                <img width="20" src="../tampermonkey.png"></img>
               </span>
               <span>burlesco.user.js</span>
             </a><br>
@@ -199,11 +207,11 @@
     <hr class="is-marginless">
 
     <section class="section narrow content">
-      <h2 class="title is-2 has-anchor-link" id="publicacoes">
-        <a class="anchor-link" href="#publicacoes">#</a>
+      <h2 class="title is-2 has-anchor-link" id="publications">
+        <a class="anchor-link" href="#publications">#</a>
         Supported publications
       </h2>
-      <p>O Burlesco funciona com os seguintes sites de notícia:</p>
+      <p>Burlesco works with the following news websites:</p>
 
       <ul class="horizontal">
         <li>
@@ -328,53 +336,8 @@
         </li>
       </ul>
 
-      <p><strong>Atenção</strong>: você realmente deveria pagar por estas publicações. A democracia depende disso. Se você acabar utilizando o Burlesco, pelo menos não use ad blockers, pois os jornais precisam ser financiados de alguma forma.</p>
-    </section>
 
-    <hr class="is-marginless">
-
-    <section class="section narrow content">
-      <h2 class="title is-2 has-anchor-link" id="faq">
-        <a class="anchor-link" href="#faq">#</a>
-        Perguntas Frequentes
-      </h2>
-
-      <div class="content narrow">
-        <ul>
-            <li><a href="#o-que-é-paywall">O que é Paywall?</a></li>
-            <li><a href="#como-funciona">Como o Burlesco burla o paywall?</a></li>
-            <li><a href="#moral">Burlar esse bloqueio não é ilegal ou imoral?</a></li>
-            <li><a href="#novo-site">Vocês podem adicionar um novo site?</a></li>
-        </ul>
-
-        <h3><a id="o-que-é-paywall" class="anchor" href="#o-que-%C3%A9-paywall" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>O que é Paywall?</h3>
-        <p>Paywall é um sistema de assinatura usado por jornais e outros veículos de comunicação digital que restringe o acesso aos não assinantes. É uma maneira desses veículos aumentarem suas receitas, seguindo uma tendência internacional que criou a medida depois da diminuição das tiragens impressas.</p>
-
-        <p>Se o veículo deseja lucrar mais com a paywall existem alguns ônus, entre eles a perda de classificação no Google. Isso ocorre porque muitos textos deixam de ser indexados, já que requerem uma assinatura para serem lidos (e os robôs do Google não são assinantes).</p>
-
-        <p>Um mecanismo de bloqueio comumente empregado pelas publicações adeptas ao "paywall poroso" é ocultar o texto somente após o carregamento da página com JavaScript. Isso permite que os textos sejam indexados pelos mecanismos de busca, mas um usuário com JS habilitado pode ser impedido de ler o texto. Esse truque pode ser considerado cloaking (e é uma <a href="https://support.google.com/webmasters/answer/66355?hl=pt-BR">violação das diretrizes do Google</a>), mas essa discussão está ocorrendo através de outras formas, através do <a href="https://support.google.com/news/publisher/answer/40543?hl=en">programa First Click Free e do rótulo "(Assinatura)"</a>. <strong>O Burlesco só funciona com o paywall poroso.</strong></p>
-
-        <p>Jornais como O Popular usam um bloqueio mais simples e efetivo: notícias restritas a assinantes são, de fato, restritas a assinantes. Elas não são indexadas pelo Google; a notícia só é carregada se um usuário assinante estiver logado. Obviamente, essa extensão não funciona com esse tipo de bloqueio.</p>
-
-        <h3><a id="como-funciona" class="anchor" href="#como-funciona" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Como o Burlesco burla o paywall?</h3>
-
-        <p>Após servir a página com o conteúdo, os sites de notícia incluem um JavaScript responsável por ocultar o texto.</p>
-        <p>O Burlesco instrui o navegador a ignorar esses scripts, enquanto todos os outros scripts que controlam menus, infográficos e comentários continuam funcionando perfeitamente.</p>
-        <p>O conteúdo na verdade já é disponibilizado pelos próprios sites de notícia. Essa extensão apenas garante que os textos sejam exibidos de maneira legível. A única diferença é que, de forma conveniente, a extensão permite que o usuário leia o conteúdo diretamente em um navegador, ainda que esteja com o JavaScript habilitado.</p>
-        <p>Trata-se apenas de apenas uma conveniência para que o usuário determinado a ler uma notícia bloqueada não tenha que ficar alterando as configurações do navegador, usando o modo de navegação anônima ou apps de leitura offline.</p>
-
-
-        <h3><a id="moral" class="anchor" href="#moral" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Burlar esse bloqueio não é ilegal ou imoral?</h3>
-
-        <p>São as próprias empresas que estão servindo os dados, e elas <a href="https://www.eff.org/deeplinks/2016/05/open-letter-members-w3c-advisory-committee">não podem ditar como os navegadores</a> devem apresentá-los. Escolher como um conteúdo deve ser apresentado em nossos computadores é uma garantia e uma premissa da web aberta. Se algum desses jornais estiver insatisfeito com a situação, eles são os únicos capazes de realizar o bloqueio efetivo. Talvez eles não o façam porque querem ter o benefício tanto de quem provê conteúdo pago (dinheiro das assinaturas) quanto de quem provê conteúdo gratuito (dinheiro dos anúncios e maior presença na internet).</p>
-        <p>Como <a href="http://www1.folha.uol.com.br/fsp/ombudsman/50571-nos-nao-vamos-pagar-nada.shtml">disse a própria Ombudsman da Folha de S.Paulo</a> em 2012, quando o paywall foi implementado: <em>Não é difícil imaginar formas de burlar o “paywall”</em>. Mesmo sabendo que é facilmente burlável, a Folha continua usando tal mecanismo há cinco anos.</p>
-        <p>A Folha e os outros jornais podem estar sendo bonzinhos ou também podem estar lucrando, pelo menos um pouco, com os não pagantes através dos anúncios (a menos que você também use um bloqueador de anúncios). Por isso, usar o Burlesco com adblockers é fortemente desencorajado. O financiamento dos jornais precisa vir de algum lugar.</p>
-
-        <h3><a id="novo-site" class="anchor" href="#novo-site" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vocês podem adicionar um novo site?</h3>
-        <p>Deixe sua sugestão! O Burlesco só funciona com paywall poroso (aquele que libera uma quantidade de notícias por mês).</p>
-        <p>Se você for desenvolvedor e quiser contribuir, pull requests são muito bem vindos. O Burlesco é open source e <a href="https://github.com/rodorgas/burlesco/graphs/contributors">agradece as contribuições</a>, então se você conseguir burlar algum site novo, pode ajudar a deixar a lista maior.</p>
-      </div>
-
+      <p><strong>Attention</strong>: you really should pay for these publications. Democracy depends on it. If you happen to use Burlesco, please don't use ad blockers, since newspapers need to be funded in some way.</p>
     </section>
 
     <hr class="is-marginless">
@@ -383,18 +346,18 @@
       <div class="columns">
         <div class="column is-two-thirds">
           <h2 class="title is-2 has-anchor-link">
-            Código-fonte
+            Source Code
             <a class="anchor-link" href="#atualizacoes">#</a>
           </h2>
-          <p>O código-fonte pode ser usado para inspecionar o Burlesco e para fazer a instalação manual.</p>
-          <p>Para instalar a extensão manualmente a partir do código-fonte, <a href="instrucoes-chrome.html">siga estas instruções</a>.</p>
+          <p>Source code can be used to inspect Burlesco and to install it manually.</p>
+          <p>You can install the extension manually from source <a href="chrome-instructions.html">following these instructions</a>.</p>
           <div class="center" style="flex-direction: column">
             <p>
               <a class="button is-large" href="https://github.com/rodorgas/burlesco/releases">
                 <span class="icon">
                   <i class="fa fa-file-archive-o"></i>
                 </span>
-                <span>Extensão</span>
+                <span>Extension</span>
               </a>
             </p>
             <p>
@@ -408,8 +371,8 @@
           </div>
         </div>
         <div class="column">
-          <h2 class="title is-2 has-anchor-link" id="atualizacoes">
-            Atualizações
+          <h2 class="title is-2 has-anchor-link" id="updates">
+            Updates
             <a class="anchor-link" href="#atualizacoes">#</a>
           </h2>
           <!--<a class="twitter-timeline" data-lang="pt" data-height="350" data-dnt="true" href="https://twitter.com/BurlescoExt?ref_src=twsrc%5Etfw">Tweets by BurlescoExt</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
@@ -422,8 +385,21 @@
       <div id="disqus_thread"></div>
       <script>
 
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        var disqus_config = function () {
+          this.page.url = 'https://burles.co';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = 'dxm10zcw_index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        // (function() { // DON'T EDIT BELOW THIS LINE
+        //   var d = document, s = d.createElement('script');
+        //   s.src = 'https://burlesco.disqus.com/embed.js';
+        //   s.setAttribute('data-timestamp', +new Date());
+        //   (d.head || d.body).appendChild(s);
+        // })();
       </script>
-      <!--<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>-->
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </section>
 
     <script src="../build/bowser.min.js"></script>
