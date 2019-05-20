@@ -19,4 +19,4 @@ rules:
     - always
   max-len:
     - 1
-    - code: 80
+    - code: 120
