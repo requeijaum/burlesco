@@ -9,7 +9,7 @@ clean:
 	rm -rf "$(DIST_DIR)"
 lint:
 	find . -name '*.json' -exec python -c 'import json; json.load(open("{}"))' \;
-	eslint webext userscript
+	npx eslint webext userscript
 pre-build: clean
 	set -e ; \
 	for i in $(BROWSERS) ; do \
