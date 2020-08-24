@@ -30,7 +30,7 @@ Há um Makefile para auxiliar no desenvolvimento:
 
 ## Userscript
 
-O código-fonte do userscript está em `userscript/burlesco.user.js`. Ele funciona bloqueando pedidos responsáveis pelo paywall e injetando scripts para impedir sua ativação.
+O código-fonte do userscript está em um repositório próprio [aqui](https://github.com/burlesco/userscript). Ele funciona bloqueando pedidos responsáveis pelo paywall e injetando scripts para impedir sua ativação.
 
 Esse userscript funciona apenas com o Tampermonkey, porque é o único com suporte a API @webRequest.
 
@@ -42,11 +42,16 @@ Se você tiver alguma dúvida ou ideia para burlar um site novo, abra uma issue 
 
 O Burlesco funciona com os seguintes sites de notícia:
 
-- BR18
+- BRPOLÍTICO
+- Correio 24 Horas
 - Correio Popular
+- Crusoé
+- Diário do Grande ABC
 - Diário da Região
 - Diário Popular
 - Diarinho
+- Estado de Minas
+- Época
 - Exame
 - Folha de Londrina
 - Folha de S.Paulo
@@ -57,7 +62,6 @@ O Burlesco funciona com os seguintes sites de notícia:
 - Jornal NH
 - Jornal Pioneiro
 - Jornal VS
-- Nexo
 - NSC Total
 - O Estado de S. Paulo
 - O Globo

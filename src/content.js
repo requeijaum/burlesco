@@ -7,6 +7,16 @@ const ABRIL_CODE = `
 `;
 
 const INJECTION = {
+  correio24horas: {
+    url: /correio24horas\.com\.br/,
+    code: `
+      jQuery('[class^=paywall]').remove();
+      jQuery('[class$=blocked]').removeClass();
+      jQuery('[id^=paywall]').removeClass('hide').removeClass('is-active');
+      jQuery('.noticias-single__content__text').attr('style', 'height:auto;');
+      jQuery('[id^=paywall]').remove();
+    `
+  },
   diariodaregiao: {
     url: /diariodaregiao\.com\.br/,
     code: `
@@ -26,6 +36,20 @@ const INJECTION = {
         $("#bt-read-more-content").next().show().prev().remove();
       }
       setTimeout(showText, 100);
+    `
+  },
+  nexo: {
+    url: /nexojornal\.com\.br/,
+    code: `
+      const selectors = [
+        "div[class*='PaywallBumper__wrap-container'",
+        "div[class*='Datawall__wrap-container'"
+      ]
+
+      selectors.forEach(selector => {
+        const element = document.querySelector(selector)
+        if (element) element.remove()
+      })
     `
   },
   superinteressante: {

@@ -8,9 +8,14 @@ const WHITELIST = {
 };
 
 const BLOCKLIST = {
-  br18: {
+  brpolitico: {
     xhrBlocking: [
       '*://*.estadao.com.br/paywall/*',
+    ]
+  },
+  correio24horas: {
+    scriptBlocking: [
+      '*://correio-static.cworks.cloud/vendor/bower_components/paywall.js/paywall.js*',
     ]
   },
   correiopopular: {
@@ -42,7 +47,15 @@ const BLOCKLIST = {
     xhrBlocking: [
       '*://paywall.folha.uol.com.br/*',
       '*://static.folha.uol.com.br/paywall/*',
-    ]
+    ],
+  },
+  folhadelondrina: {
+    scriptBlocking: [
+      '*://www.folhadelondrina.com.br/login.php*',
+    ],
+    xhrBlocking: [
+      '*://www.folhadelondrina.com.br/login.php*',
+    ],
   },
   gazetadopovo: {
     scriptBlocking: [
@@ -64,14 +77,12 @@ const BLOCKLIST = {
   },
   jornalnh: {
     scriptBlocking: [
-      '*://*.jornalnh.com.br/includes/js/paywall.js*',
-      '*://blockv2.fivewall.com.br/*',
+      '*://*.fivewall.com.br/*',
     ]
   },
   jornalvs: {
     scriptBlocking: [
-      '*://www.jornalvs.com.br/includes/js/paywall.js*',
-      '*://blockv2.fivewall.com.br/*',
+      '*://*.fivewall.com.br/*',
     ]
   },
   jota: {
@@ -82,10 +93,9 @@ const BLOCKLIST = {
     }
   },
   nexo: {
-    cookieBlocking: {
-      urlFilter: '*://api.nexojornal.com.br/*',
-      blockAll: true
-    }
+    xhrBlocking: [
+      'https://acesso.nexojornal.com.br/paywall/*'
+    ]
   },
   nsctotal: {
     xhrBlocking: [
@@ -96,20 +106,6 @@ const BLOCKLIST = {
     xhrBlocking: [
       '*://*.estadao.com.br/paywall/*',
     ]
-  },
-  oglobo: {
-    urls: [
-      /oglobo.globo.com/,
-    ],
-    allowScript: [
-      '*://cdn.tinypass.com/api/tinypass.min.js',
-    ],
-    xhrBlocking: [
-      '*://static.infoglobo.com.br/paywall/register-piano/*/scripts/nova-tela-register.js',
-    ],
-    scriptBlocking: [
-      'https://static.infoglobo.com.br/paywall/js/tiny.js'
-    ],
   },
   pioneiro: {
     scriptBlocking: [
@@ -361,12 +357,17 @@ function removeListeners() {
   chrome.webRequest.onBeforeRequest.removeListener(onBeforeRequestScript);
   chrome.webRequest.onBeforeRequest.removeListener(onBeforeRequestXml);
   chrome.webRequest.onHeadersReceived.removeListener(onHeadersReceivedCookie);
-  chrome.webRequest.onBeforeSendHeaders.removeListener(
-    onBeforeSendHeadersCookie);
-  for (let item of callbacksOnBeforeRequestCookie)
-    chrome.webRequest.onBeforeRequest.removeListener(item);
-  for (let item of callbacksOnBeforeSendHeadersInjection)
-    chrome.webRequest.onBeforeSendHeaders.removeListener(item);
+  chrome.webRequest.onBeforeSendHeaders.removeListener(onBeforeSendHeadersCookie);
+  for (let item of callbacksOnBeforeRequestCookie) {
+    if (Object.prototype.hasOwnProperty.call(callbacksOnBeforeRequestCookie, item)) {
+      chrome.webRequest.onBeforeRequest.removeListener(item);
+    }
+  }
+  for (let item of callbacksOnBeforeSendHeadersInjection) {
+    if (Object.prototype.hasOwnProperty.call(callbacksOnBeforeSendHeadersInjection, item)) {
+      chrome.webRequest.onBeforeSendHeaders.removeListener(item);
+    }
+  }
 }
 
 apply();

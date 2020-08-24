@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "burlesco",
-  "version": "11.15",
+  "version": "11.20",
   "description": "Leia notícias sem ser assinante, burle o paywall",
   "homepage_url": "https://burles.co",
   "author": "rodorgas",
@@ -25,7 +25,9 @@
         "*://super.abril.com.br/*",
         "*://*.veja.abril.com.br/*",
         "*://*.jota.info/*",
-        "*://*.diariodaregiao.com.br/*"
+        "*://*.diariodaregiao.com.br/*",
+        "*://*.correio24horas.com.br/*",
+        "*://*.nexojornal.com.br/*"
       ]
     },
     {
@@ -33,7 +35,12 @@
       "run_at": "document_start",
       "matches": [
         "*://gauchazh.clicrbs.com.br/*",
-        "*://*.oglobo.globo.com/*"
+        "*://*.oglobo.globo.com/*",
+        "*://*.dgabc.com.br/*",
+        "*://*.epoca.globo.com/*",
+        "*://*.nexojornal.com.br/*",
+        "*://crusoe.com.br/*",
+        "*://*.em.com.br/*"
       ]
     }
   ],
@@ -48,7 +55,7 @@
     "*://*.nsctotal.com.br/*",
     "*://www.diariopopular.com.br/*",
     "*://*.estadao.com.br/*",
-    "*://blockv2.fivewall.com.br/*",
+    "*://*.fivewall.com.br/*",
     "*://*.folha.uol.com.br/*",
     "*://*.folha.com.br/*",
     "*://gauchazh.clicrbs.com.br/*",
@@ -72,13 +79,16 @@
     "*://*.uol.com.br/*",
     "*://tm.jsuol.com.br/*",
     "*://www.uol/*",
-    "*://www.folhadelondrina.com.br/*/fivewall.js*",
+    "*://*.folhadelondrina.com.br/*",
     "*://pioneiro.clicrbs.com.br/*",
     "*://www.gazetaonline.com.br/*",
     "*://www.jornalvs.com.br/*",
-    "*://*.br18.com.br/*",
+    "*://*.brpolitico.com.br/*",
     "*://*.diarinho.com.br/*",
-    "*://*.diariodaregiao.com.br/*"
+    "*://*.diariodaregiao.com.br/*",
+    "*://*.correio24horas.com.br/*",
+    "*://correio-static.cworks.cloud/vendor/bower_components/paywall.js/paywall.js*",
+    "*://*.epoca.globo.com/*"
   ],
 
   "applications": {
